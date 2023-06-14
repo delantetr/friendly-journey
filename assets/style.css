@@ -65,17 +65,21 @@
 	z-index: 99;
 	display: none;
 }
+
 #menu ul.sub-menus li {
 	display: block;
 	width: 100%;
 }
+
 #menu ul.sub-menus a {
 	color: #FFFFFF;
 	font-size: 16px;
 }
+
 #menu li:hover ul.sub-menus {
 	display: block
 }
+
 #menu ul.sub-menus a:hover{
 	background: #F2F2F2;
 	color: #444444;
