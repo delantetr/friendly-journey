@@ -1,15 +1,16 @@
 #menu {
 	background: #FFFFFF;
-	color: #FFF;
 	height: 45px;
 	padding-left: 18px;
 	border-radius: 10px;
 	border: 1px solid #000000;
+
 }
 #menu ul, #menu li {
 	margin: 0 auto;
 	padding: 0;
 	list-style: none
+
 }
 #menu ul {
 	width: 100%;
@@ -56,32 +57,17 @@
 	content: "\2261"; 
 	margin-left: 20px;
 }
-#menu ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: #444444;
+#holiday-list {
+	display:none;
 	position: absolute;
-	z-index: 99;
-	display: none;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
 }
 
-#menu ul.sub-menus li {
+#holiday-dropdown:hover #holiday-list {
 	display: block;
-	width: 100%;
-}
-
-#menu ul.sub-menus a {
-	color: #FFFFFF;
-	font-size: 16px;
-}
-
-#menu li:hover ul.sub-menus {
-	display: block
-}
-
-#menu ul.sub-menus a:hover{
-	background: #F2F2F2;
-	color: #444444;
 }
 
