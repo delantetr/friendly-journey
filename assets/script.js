@@ -31,8 +31,18 @@ function selectHoliday() {
         holidayList.textContent = options;
         holidayButton.appendChild(holidayList);
       }
+
+      options.addEventListener('click', eventDisplay);
+
+        function eventDisplay() {
+            console.log('Click Confirmed \n--------------------------------------');
+            console.log('Event Display Results \n--------------------------------');
+        }
+      
     })
 }
+
+
 
 
 // City Selector--------------------------------------------------------------
