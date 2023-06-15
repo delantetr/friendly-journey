@@ -1,16 +1,16 @@
 // Dom Navigation-------------------------------------------------------------
-var holidayWindow = document.querySelector('#holiday-window');
-var cityWindow = document.querySelector('#city-window');
-var stateWindow = document.querySelector('#state-window');
-var venueWindow = document.querySelector('#venue-window');
+var holidayButton = document.querySelector('#holiday-button');
+var cityButton = document.querySelector('#city-button');
+var stateButton = document.querySelector('#state-button');
+var venueButton = document.querySelector('#venue-button');
 
 // GLobal Variables-----------------------------------------------------------
 
 
 // Holiday Selector----------------------------------------------------------
-holidayWindow.addEventListener('click', handleMouseEnter);
+holidayButton.addEventListener('click', selectHoliday);
 
-function handleMouseEnter() {
+function selectHoliday() {
   console.log('Click Confirmed \n-----------------------------------------------');
   var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
 
@@ -19,37 +19,40 @@ function handleMouseEnter() {
       return response.json();
     })
     .then(function (data) {
-      var specificValue = data[0].localName;
+    //   console.log('Total Holiday Data \n--------------------------------');
+    //   console.log(data);
 
-      console.log('Total Holiday Data \n--------------------------------');
-      console.log(data);
-      console.log('Specific Data Selection \n----------------------------');
-      console.log(specificValue);
-      
-      var holidayList = document.createElement('ul');
-      holidayList.textContent = specificValue;
-      holidayWindow.appendChild(holidayList);
-    });
+    //   console.log('Holiday Names \n---------------------------------------------------');
+      for (var i = 0; i < data.length; i++) {
+        // console.log(data[i].localName);
+        options = data[i].localName;
+
+        var holidayList = document.createElement('ul');
+        holidayList.textContent = options;
+        holidayButton.appendChild(holidayList);
+      }
+    })
 }
 
 
+// City Selector--------------------------------------------------------------
+cityButton.addEventListener('click', citySearch);
 
+function citySearch() {
+    console.log('Click Confirmed \n-----------------------------------------');
+    var cityRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+}
+// State Selector--------------------------------------------------------------
+stateButton.addEventListener('click', stateSearch);
 
+function stateSearch() {
+    console.log('Click Confirmed \n-----------------------------------------');
+    var stateRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+}
+// Venue Selector--------------------------------------------------------------
+venueButton.addEventListener('click', venueSearch);
 
-  
-
-
-// var requestUrl = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-
-// fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//         var specificValue = data.events;
-
-//         console.log('Total Event Data \n-----------------------------------');
-//         console.log(data);
-//         console.log('Specfic Data selection \n------------------------------');
-//         console.log(specificValue);
-//     })
+function venueSearch() {
+    console.log('Click Confirmed \n-----------------------------------------');
+    var requestUrl = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+}
