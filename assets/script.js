@@ -32,8 +32,6 @@ function selectHoliday() {
         holidayButton.appendChild(holidayList);
       }
     })
-}
-
 
 // City Selector--------------------------------------------------------------
 cityButton.addEventListener('click', citySearch);
@@ -55,4 +53,4 @@ venueButton.addEventListener('click', venueSearch);
 function venueSearch() {
     console.log('Click Confirmed \n-----------------------------------------');
     var requestUrl = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-}
+}}
