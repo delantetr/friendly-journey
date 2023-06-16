@@ -10,6 +10,7 @@ var holidayDropdown = document.querySelector('#holiday-dropdown');
 
 
 
+
 // GLobal Variables-----------------------------------------------------------
 var options;
 var holidayList;
@@ -33,35 +34,40 @@ var christmas = 'https://api.seatgeek.com/2/events?datetime_utc=2023-12-25&clien
 
 
 // Holiday Selector----------------------------------------------------------
-// holidayButton.addEventListener('click', onHolidayButtonClick);
+holidayButton.addEventListener('click', populateHolidays);
 
 
-function onHolidayButtonClick() {
-  console.log('Click Confirmed \n-----------------------------------------------');
-}
+// function HolidayButtonClick() {
+//     // function onHolidayButtonClick() {
+//     console.log('Click Confirmed \n-----------------------------------------------');
+//     }
 
-function populateHolidays(){
-  console.log('Get Holidays \n----------------------------------------------------------------------------------------');
-  var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
+    function populateHolidays(){
+    console.log('Get Holidays \n----------------------------------------------------------------------------------------');
+    var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
 
-  fetch(holidayRequest)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log('Total Holiday Data');
-      console.log(data);
-      
-    //   console.log('Holiday Names \n---------------------------------------------------');
-      for (var i = 0; i < data.length; i++) {
-        // console.log(data[i].localName);
+    fetch(holidayRequest)
+        .then(function (response) {
+        return response.json();
+        })
+        .then(function (data) {
+        console.log('Total Holiday Data');
+        console.log(data);
+        
+        //   console.log('Holiday Names \n---------------------------------------------------');
+        for (var i = 0; i < data.length; i++) {
+            // console.log(data[i].localName);
 
-        var holiday = document.createElement('li');
-        holiday.textContent = data[i].localName;
-        holidayList.appendChild(holiday);
-      }
-    });
-}
+            var holiday = document.createElement('li');
+            holiday.textContent = data[i].localName;
+            holidayList.appendChild(holiday);
+        }
+        });
+        
+    }
+
+    
+// }
 // TESTS TO MAKE SURE ELEMENT IS NOT NULL (NOT NEEDED FOR FUNCTIONALITY)
 // if (tableBody !== null) {
 //   tableBody.textContent = 'Some text';
@@ -80,7 +86,7 @@ holidayList.addEventListener('click', holidayChoice)
         console.log(event.target);
         console.log('Total Event Data');
         // var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-        fetch()
+        fetch(juneteenth)
             .then(function (response) {
                 return response.json();
                 })
@@ -142,7 +148,7 @@ function citySearch() {
     var cityRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 }
 // State Selector--------------------------------------------------------------
-stateButton.addEventListener('click', stateSearch);
+// stateButton.addEventListener('click', stateSearch);
 
 function stateSearch() {
     console.log('Click Confirmed \n-----------------------------------------');
@@ -153,4 +159,4 @@ function stateSearch() {
 
 
 //When this script gets loaded -------------------------------------------------------------------
-populateHolidays();
+// populateHolidays();
