@@ -71,6 +71,13 @@
 	display: block;
 }
 
+#states-tab {
+	display: inline-flex;
+    flex-wrap: wrap;
+    padding: 4px;
+	float: right;
+}
+
 footer {
     padding: 10px;
     display: flex;
@@ -82,3 +89,4 @@ footer {
 	border-style: solid;
     border-width: 4px;
 }
+
