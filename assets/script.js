@@ -74,9 +74,9 @@ holidayList.addEventListener('click', holidayChoice)
                 for(var i = 0; i < data.length; i++) {
                     var createTableRow = document.createElement('tr');
                     var tableData = document.createElement('td');
-                    var eventData = JSON.stringify(data);
+                    // var eventData = JSON.stringify(data);
 
-                    tableData.textContent = eventData;
+                    tableData.textContent = data;
 
                     createTableRow.appendChild(tableData);
                     tableBody.appendChild(createTableRow);
