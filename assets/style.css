@@ -71,3 +71,14 @@
 	display: block;
 }
 
+footer {
+    padding: 10px;
+    display: flex;
+    text-align: flex-end;
+    background: #FFFFFF;
+    color: black;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+	border-style: solid;
+    border-width: 4px;
+}
