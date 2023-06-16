@@ -5,6 +5,7 @@ var stateButton = document.querySelector('#state-button');
 var venueButton = document.querySelector('#venue-button');
 var holidayList = document.getElementById("holiday-list");
 var tableBody = document.querySelector('#holiday-table');
+var holidayDropdown = document.querySelector('#holiday-dropdown');
 
 
 
@@ -24,7 +25,7 @@ function onHolidayButtonClick() {
 }
 
 function populateHolidays(){
-  console.log('Get holidays');
+  console.log('Get Holidays \n----------------------------------------------------------------------------------------');
   var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
 
   fetch(holidayRequest)
@@ -32,7 +33,7 @@ function populateHolidays(){
       return response.json();
     })
     .then(function (data) {
-    //   console.log('Total Holiday Data \n--------------------------------');
+      console.log('Total Holiday Data');
       console.log(data);
       
     //   console.log('Holiday Names \n---------------------------------------------------');
@@ -45,41 +46,69 @@ function populateHolidays(){
       }
     });
 }
+// TESTS TO MAKE SURE ELEMENT IS NOT NULL (NOT NEEDED FOR FUNCTIONALITY)
+// if (tableBody !== null) {
+//   tableBody.textContent = 'Some text';
+// } else {
+//   console.error('Error: Element not found');
+// }
 
 
-holidayButton.addEventListener('click',holidayChoice);
+holidayList.addEventListener('click', holidayChoice) 
 
-function holidayChoice(event) {
-    console.log(event.target);
 
-    var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc.lte=2023-11-25&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+
+    function holidayChoice(event) {
+        console.log('Get Events \n--------------------------------------------------------------------------------------');
+        console.log('Holiday Choice Confirm')
+        console.log(event.target);
+        console.log('Total Event Data');
+        var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+        fetch(eventRequest)
+            .then(function (response) {
+                return response.json();
+                })
+            .then(function (data) {
+                // console.log('Events List \n---------------------------');
+                console.log(data);
+                for(var i = 0; i < data.length; i++) {
+                    var createTableRow = document.createElement('tr');
+                    var tableData = document.createElement('td');
+                    var eventData = JSON.stringify(data);
+
+                    tableData.textContent = eventData;
+
+                    createTableRow.appendChild(tableData);
+                    tableBody.appendChild(createTableRow);
+                }
+            })
+    }       
+
+//     var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc.lte=2023-11-25&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
     
-    fetch(eventRequest)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-            for (var i = 0; i < data.length; i++) {
-                // Creating elements, tablerow, tabledata, and anchor
-                var createTableRow = document.createElement('tr');
-                var tableData = document.createElement('td');
+//     fetch(eventRequest)
+//         
+//         })
+//             for (var i = 0; i < data.length; i++) {
+//                 // Creating elements, tablerow, tabledata, and anchor
+//                 var createTableRow = document.createElement('tr');
+//                 var tableData = document.createElement('td');
 
-                tableData.textContent = data[0].title;
-                console.log(tableData);
+//                 tableData.textContent = data[0].title;
+//                 console.log(tableData);
 
-                createTableRow.appendChild(tableData);
-                tableBody.appendChild(createTableRow);
-            }
-            // eventArray.push(eventRequest);
-            // data.json.stringify(eventArray)
+//                 createTableRow.appendChild(tableData);
+//                 tableBody.appendChild(createTableRow);
+//             }
+//             // eventArray.push(eventRequest);
+//             // data.json.stringify(eventArray)
             
-        })
+//         })
         
     
-    console.log(eventArray);
+//     console.log(eventArray);
     
-}
+// }
 
 
 
@@ -99,13 +128,7 @@ function stateSearch() {
     console.log('Click Confirmed \n-----------------------------------------');
     var stateRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 }
-// Venue Selector--------------------------------------------------------------
-venueButton.addEventListener('click', venueSearch);
 
-function venueSearch() {
-    console.log('Click Confirmed \n-----------------------------------------');
-    var requestUrl = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-}
 
 
 
