@@ -127,7 +127,7 @@ function citySearch() {
     var cityRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 }
 // State Selector--------------------------------------------------------------
-stateButton.addEventListener('click', stateSearch);
+// stateButton.addEventListener('click', stateSearch);
 
 function stateSearch() {
     console.log('Click Confirmed \n-----------------------------------------');
