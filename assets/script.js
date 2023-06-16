@@ -10,43 +10,64 @@ var holidayDropdown = document.querySelector('#holiday-dropdown');
 
 
 
+
 // GLobal Variables-----------------------------------------------------------
 var options;
 var holidayList;
 var eventArray = []
 
+// API Request Variables----------------------------------------------------------------
+var newYears = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-01&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var mlk = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-16&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var presidentsDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-02-20&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var goodFriday = 'https://api.seatgeek.com/2/events?datetime_utc=2023-04-07&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var goodFridayTX = 'https://api.seatgeek.com/2/events?datetime_utc=2023-04-07&venue.state=TX&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var memorialDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-05-29&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var juneteenth = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var independenceDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-07-04&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var laborDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-09-04&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var columbusDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-10-09&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var veteransDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-10&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var thanksgiving = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-23&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var christmas = 'https://api.seatgeek.com/2/events?datetime_utc=2023-12-25&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+
 
 
 // Holiday Selector----------------------------------------------------------
-// holidayButton.addEventListener('click', onHolidayButtonClick);
+holidayButton.addEventListener('click', populateHolidays);
 
 
-function onHolidayButtonClick() {
-  console.log('Click Confirmed \n-----------------------------------------------');
-}
+// function HolidayButtonClick() {
+//     // function onHolidayButtonClick() {
+//     console.log('Click Confirmed \n-----------------------------------------------');
+//     }
 
-function populateHolidays(){
-  console.log('Get Holidays \n----------------------------------------------------------------------------------------');
-  var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
+    function populateHolidays(){
+    console.log('Get Holidays \n----------------------------------------------------------------------------------------');
+    var holidayRequest = 'https://date.nager.at/api/v3/publicholidays/2023/US';
 
-  fetch(holidayRequest)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log('Total Holiday Data');
-      console.log(data);
-      
-    //   console.log('Holiday Names \n---------------------------------------------------');
-      for (var i = 0; i < data.length; i++) {
-        // console.log(data[i].localName);
+    fetch(holidayRequest)
+        .then(function (response) {
+        return response.json();
+        })
+        .then(function (data) {
+        console.log('Total Holiday Data');
+        console.log(data);
+        
+        //   console.log('Holiday Names \n---------------------------------------------------');
+        for (var i = 0; i < data.length; i++) {
+            // console.log(data[i].localName);
 
-        var holiday = document.createElement('li');
-        holiday.textContent = data[i].localName;
-        holidayList.appendChild(holiday);
-      }
-    });
-}
+            var holiday = document.createElement('li');
+            holiday.textContent = data[i].localName;
+            holidayList.appendChild(holiday);
+        }
+        });
+        
+    }
+
+    
+// }
 // TESTS TO MAKE SURE ELEMENT IS NOT NULL (NOT NEEDED FOR FUNCTIONALITY)
 // if (tableBody !== null) {
 //   tableBody.textContent = 'Some text';
@@ -64,15 +85,15 @@ holidayList.addEventListener('click', holidayChoice)
         console.log('Holiday Choice Confirm')
         console.log(event.target);
         console.log('Total Event Data');
-        var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-        fetch(eventRequest)
+        // var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+        fetch(juneteenth)
             .then(function (response) {
                 return response.json();
                 })
             .then(function (data) {
                 // console.log('Events List \n---------------------------');
                 console.log(data);
-                console.log(data.events[0].title)
+                // console.log(data.events[0].title)
                 for(var i = 0; i < data.events.length; i++) {
                     var createTableRow = document.createElement('tr');
                     var tableData = document.createElement('td');
@@ -127,7 +148,7 @@ function citySearch() {
     var cityRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-25&venue.city=charlotte&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 }
 // State Selector--------------------------------------------------------------
-stateButton.addEventListener('click', stateSearch);
+// stateButton.addEventListener('click', stateSearch);
 
 function stateSearch() {
     console.log('Click Confirmed \n-----------------------------------------');
@@ -138,4 +159,4 @@ function stateSearch() {
 
 
 //When this script gets loaded -------------------------------------------------------------------
-populateHolidays();
+// populateHolidays();
