@@ -15,6 +15,21 @@ var options;
 var holidayList;
 var eventArray = []
 
+// API Request Variables----------------------------------------------------------------
+var newYears = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-01&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var mlk = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-16&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var presidentsDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-02-20&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var goodFriday = 'https://api.seatgeek.com/2/events?datetime_utc=2023-04-07&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var goodFridayTX = 'https://api.seatgeek.com/2/events?datetime_utc=2023-04-07&venue.state=TX&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var memorialDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-05-29&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var juneteenth = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var independenceDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-07-04&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var laborDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-09-04&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var columbusDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-10-09&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var veteransDay = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-10&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var thanksgiving = 'https://api.seatgeek.com/2/events?datetime_utc=2023-11-23&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+var christmas = 'https://api.seatgeek.com/2/events?datetime_utc=2023-12-25&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+
 
 
 // Holiday Selector----------------------------------------------------------
@@ -64,15 +79,15 @@ holidayList.addEventListener('click', holidayChoice)
         console.log('Holiday Choice Confirm')
         console.log(event.target);
         console.log('Total Event Data');
-        var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
-        fetch(eventRequest)
+        // var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
+        fetch()
             .then(function (response) {
                 return response.json();
                 })
             .then(function (data) {
                 // console.log('Events List \n---------------------------');
                 console.log(data);
-                console.log(data.events[0].title)
+                // console.log(data.events[0].title)
                 for(var i = 0; i < data.events.length; i++) {
                     var createTableRow = document.createElement('tr');
                     var tableData = document.createElement('td');
