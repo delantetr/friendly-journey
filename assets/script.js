@@ -4,7 +4,8 @@ var cityButton = document.querySelector('#city-button');
 var stateButton = document.querySelector('#state-button');
 var venueButton = document.querySelector('#venue-button');
 var holidayList = document.getElementById("holiday-list");
-var tableBody = document.querySelector('#holiday-table');
+var tableWindow = document.querySelector('#holiday-table');
+var tableBody = document.querySelector('#h-table-body');
 var holidayDropdown = document.querySelector('#holiday-dropdown');
 
 
@@ -71,13 +72,17 @@ holidayList.addEventListener('click', holidayChoice)
             .then(function (data) {
                 // console.log('Events List \n---------------------------');
                 console.log(data);
-                for(var i = 0; i < data.length; i++) {
+                console.log(data.events[0].title)
+                for(var i = 0; i < data.events.length; i++) {
                     var createTableRow = document.createElement('tr');
                     var tableData = document.createElement('td');
-                    // var eventData = JSON.stringify(data);
+                    var link = document.createElement('a');
 
-                    tableData.textContent = data;
+                    link.textContent = data.events[i].title;
+                    console.log('Event Title');
+                    // console.log(data[i].title);
 
+                    tableData.appendChild(link);
                     createTableRow.appendChild(tableData);
                     tableBody.appendChild(createTableRow);
                 }
