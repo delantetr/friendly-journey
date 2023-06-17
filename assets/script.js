@@ -8,7 +8,10 @@ var tableWindow = document.querySelector('#holiday-table');
 var tableBody = document.querySelector('#h-table-body');
 var holidayDropdown = document.querySelector('#holiday-dropdown');
 
+// document.body.children[1].children[0].children[1].children[2].children[0].setAttribute('id', nye);
 
+// console.log(nye);
+console.log(document.body.children[2].children[1].children[1].children[1].children)
 
 // // GLobal Variables-----------------------------------------------------------
 var options;
@@ -117,21 +120,37 @@ holidayButton.addEventListener('click', populateHolidays);
                     return response.json();
                     })
                 .then(function (data) {
-                    // tableBody.innerHTML = '';
+                    tableBody.innerHTML = '';
                     // console.log('Events List \n---------------------------');
                     // console.log(data);
                     // console.log(data.events[0].title)
                     for(var i = 0; i < data.events.length; i++) {
                         var createTableRow = document.createElement('tr');
-                        var tableData = document.createElement('td');
-                        var link = document.createElement('a');
+                        var name = document.createElement('td');
+                        var venue = document.createElement('td');
+                        var city = document.createElement('td');
 
-                        link.textContent = data.events[i].title;
+                        name.textContent = data.events[i].title;
+                        venue.textContent = data.events[i].venue.name;
+                        city.textContent = data.events[i].venue.city;
+
+
+                        var timeString = data.events[i].datetime_local;
+                        var timeParts = timeString.split('T')[1].split(':');
+                        var hours = timeParts[0];
+                        var minutes = timeParts[1];
+
+                        var time = document.createElement('td')
+                        var timeText = document.createTextNode(hours + ':' + minutes);
+
                         // console.log('Event Title');
                         // console.log(data.events[i].title);
 
-                        tableData.appendChild(link);
-                        createTableRow.appendChild(tableData);
+                        time.appendChild(timeText);
+                        createTableRow.appendChild(time);
+                        createTableRow.appendChild(city);
+                        createTableRow.appendChild(venue);
+                        createTableRow.appendChild(name);
                         tableBody.appendChild(createTableRow);
                     }
                 })
@@ -148,15 +167,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -173,15 +208,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -198,15 +249,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -223,15 +290,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -248,24 +331,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var name = document.createElement('a');
-                            var venue = document.createElement('a');
-                            var city = document.createElement('a');
-                            var time = document.createElement('a');
-        
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
                             name.textContent = data.events[i].title;
                             venue.textContent = data.events[i].venue.name;
                             city.textContent = data.events[i].venue.city;
-                            time.textContent = data.events[i].datetime_local;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(name);
-                            tableData.appendChild(venue);
-                            tableData.appendChild(city);
-                            tableData.appendChild(time);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -282,15 +372,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -307,15 +413,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -332,15 +454,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -357,15 +495,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -382,15 +536,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
@@ -407,15 +577,31 @@ holidayButton.addEventListener('click', populateHolidays);
                         // console.log(data.events[0].title)
                         for(var i = 0; i < data.events.length; i++) {
                             var createTableRow = document.createElement('tr');
-                            var tableData = document.createElement('td');
-                            var link = document.createElement('a');
-        
-                            link.textContent = data.events[i].title;
+                            var name = document.createElement('td');
+                            var venue = document.createElement('td');
+                            var city = document.createElement('td');
+
+                            name.textContent = data.events[i].title;
+                            venue.textContent = data.events[i].venue.name;
+                            city.textContent = data.events[i].venue.city;
+
+
+                            var timeString = data.events[i].datetime_local;
+                            var timeParts = timeString.split('T')[1].split(':');
+                            var hours = timeParts[0];
+                            var minutes = timeParts[1];
+
+                            var time = document.createElement('td')
+                            var timeText = document.createTextNode(hours + ':' + minutes);
+
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
-        
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
                         }
                     })
