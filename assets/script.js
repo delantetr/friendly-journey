@@ -8,7 +8,10 @@ var tableWindow = document.querySelector('#holiday-table');
 var tableBody = document.querySelector('#h-table-body');
 var holidayDropdown = document.querySelector('#holiday-dropdown');
 
+// document.body.children[1].children[0].children[1].children[2].children[0].setAttribute('id', nye);
 
+// console.log(nye);
+console.log(document.body.children[2].children[1].children[1].children[1].children)
 
 
 // GLobal Variables-----------------------------------------------------------
@@ -84,6 +87,7 @@ holidayList.addEventListener('click', holidayChoice)
         console.log('Get Events \n--------------------------------------------------------------------------------------');
         console.log('Holiday Choice Confirm')
         console.log(event.target);
+        console.log(event.target.value);
         console.log('Total Event Data');
         // var eventRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-06-19&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
         fetch(juneteenth)
