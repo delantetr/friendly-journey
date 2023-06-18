@@ -37,7 +37,36 @@ var christmasRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-12-2
 
 
 // // Holiday Selector----------------------------------------------------------
-holidayButton.addEventListener('click', populateHolidays);
+
+var isOpen = false;
+var isPopulated = false;
+
+holidayButton.addEventListener('click', function(event) {
+  event.stopPropagation(); 
+
+  if (isOpen) {
+    holidayList.style.display = 'none';
+  } else {
+    holidayList.style.display = 'block';
+    if (!isPopulated) {
+      populateHolidays();
+      isPopulated = true;
+    }
+  }
+
+  isOpen = !isOpen;
+});
+
+document.addEventListener('click', function(event) {
+  var targetElement = event.target;
+  var dropdownClick = targetElement.closest('#holidayList') !== null;
+  var isButtonClicked = targetElement === holidayButton;
+
+  if (!dropdownClick && !isButtonClicked) {
+    holidayList.style.display = 'none';
+    isOpen = false;
+  }
+});
 
 
     function populateHolidays(){
@@ -608,3 +637,4 @@ holidayButton.addEventListener('click', populateHolidays);
                         }
                     })
         }
+
