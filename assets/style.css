@@ -1,30 +1,38 @@
-.body {
+body {
 	background-image:url(./images/project\ 1.jpg);
-	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed ;
+}
+
 #menu {
 	background: black;
 	height: 45px;
 	padding-left: 18px;
 	border-radius: 10px;
 	border: 2px solid black;
-	boa
-
+	display: wrap;
+	flex-wrap:wrap ;
 }
+
 #menu ul, #menu li {
 	margin: 0 auto;
 	padding: 0;
 	list-style: flex;
 
 }
+
 #menu ul {
 	width: 100%;
 }
+
 #menu li {
 	float: left;
 	display: inline;
 	position: relative;
 }
+
 #menu a {
 	display: block;
 	line-height: 43px;
@@ -33,14 +41,17 @@
 	color: white;
 	font-size: 20px;
 }
+
 #menu a.dropdown-arrow:after {
 	content: "\23F7";
 	margin-left: 5px;
 }
+
 #menu li a:hover {
 	color: #000000;
 	background: #F2F2F2;
 }
+
 #menu input {
 	display: none;
 	margin: 0;
@@ -50,6 +61,7 @@
 	opacity: 0;
 	cursor: pointer
 }
+
 #menu label {
 	display: none;
 	line-height: 43px;
@@ -57,11 +69,13 @@
 	position: absolute;
 	left: 35px
 }
+
 #menu label:before {
 	font-size: 1.6em;
 	content: "\2261"; 
 	margin-left: 20px;
 }
+
 #holiday-list {
 	display:none;
 	position: absolute;
@@ -87,11 +101,13 @@ footer {
     padding: 10px;
     display: flex;
     text-align: flex-end;
-    background: #FFFFFF;
-    color: black;
+    background: black;
+    color: white;
     flex-wrap: wrap;
     justify-content: space-evenly;
 	border-style: solid;
     border-width: 4px;
+	border-radius: 10px;
+	border: black;
 }
 
