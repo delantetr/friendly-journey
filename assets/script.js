@@ -14,6 +14,8 @@ var holidayDropdown = document.querySelector('#holiday-dropdown');
 var options;
 var eventArray = []
 
+
+
 // // API Request Variables----------------------------------------------------------------
 var newYearsRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-02&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 var mlkRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-16&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
