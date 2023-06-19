@@ -17,6 +17,8 @@ console.log(document.body.children[2].children[1].children[1].children[1].childr
 var options;
 var eventArray = []
 
+
+
 // // API Request Variables----------------------------------------------------------------
 var newYearsRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-02&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
 var mlkRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-01-16&client_id=OTY5OTA0MnwxNjg2Njc3NjUxLjQ2ODczMDc'
@@ -35,7 +37,36 @@ var christmasRequest = 'https://api.seatgeek.com/2/events?datetime_utc=2023-12-2
 
 
 // // Holiday Selector----------------------------------------------------------
-holidayButton.addEventListener('click', populateHolidays);
+
+var isOpen = false;
+var isPopulated = false;
+
+holidayButton.addEventListener('click', function(event) {
+  event.stopPropagation(); 
+
+  if (isOpen) {
+    holidayList.style.display = 'none';
+  } else {
+    holidayList.style.display = 'block';
+    if (!isPopulated) {
+      populateHolidays();
+      isPopulated = true;
+    }
+  }
+
+  isOpen = !isOpen;
+});
+
+document.addEventListener('click', function(event) {
+  var targetElement = event.target;
+  var dropdownClick = targetElement.closest('#holidayList') !== null;
+  var isButtonClicked = targetElement === holidayButton;
+
+  if (!dropdownClick && !isButtonClicked) {
+    holidayList.style.display = 'none';
+    isOpen = false;
+  }
+});
 
 
     function populateHolidays(){
