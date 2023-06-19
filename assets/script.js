@@ -357,6 +357,15 @@ holidayButton.addEventListener('click', populateHolidays);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+
+                            var events = [name, city, venue, time];
+
+                            var checkbox = document.createElement("input");
+                            checkbox.type = "checkbox";
+                            checkbox.value = events;
+                            checkbox.addEventListener("change", handleEventSelection);
+
+                            tableBody.appendChild(checkbox);
                         }
                     })
         }
@@ -606,3 +615,5 @@ holidayButton.addEventListener('click', populateHolidays);
                         }
                     })
         }
+
+        
