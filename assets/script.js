@@ -429,6 +429,7 @@ document.addEventListener('click', function(event) {
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+
                         }
                     })
         }
