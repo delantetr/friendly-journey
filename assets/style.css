@@ -12,7 +12,7 @@ body {
 	padding-left: 18px;
 	border-radius: 10px;
 	border: 2px solid black;
-	display: flex;
+	display: wrap;
 	flex-wrap:wrap ;
 }
 
@@ -139,22 +139,10 @@ footer {
 
 	@media screen and (max-width: 1150px) {
 		menu ul {
-		  flex-direction: column;
-		  align-items: flex-end;
-		}
-		.contact ul {
-		  flex-direction: column;
-		  .title {
-			font-size: 175%;
-		  }
+			flex-direction: column;
+			align-items: flex-end;
 		}
 		
 	}
-	@media screen and (max-width: 768px) {
-		.work-examp{
-		flex-wrap: nowrap;
-		flex-direction: column;}
-		.about {
-		  flex-wrap: wrap-reverse;
-		}
-	  }
+		
+	}
