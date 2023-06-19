@@ -177,13 +177,25 @@ document.addEventListener('click', function(event) {
                         // console.log('Event Title');
                         // console.log(data.events[i].title);
 
-                        time.appendChild(timeText);
-                        createTableRow.appendChild(time);
-                        createTableRow.appendChild(city);
-                        createTableRow.appendChild(venue);
-                        createTableRow.appendChild(name);
-                        tableBody.appendChild(createTableRow);
-                    }
+                        var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
+                            time.appendChild(timeText);
+                            createTableRow.appendChild(time);
+                            createTableRow.appendChild(city);
+                            createTableRow.appendChild(venue);
+                            createTableRow.appendChild(name);
+                            tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
+                        }
                 })
         }
         function fetchMLKEvents () {
@@ -218,12 +230,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -259,12 +283,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -300,12 +336,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -341,12 +389,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -382,12 +442,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -423,12 +495,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -464,12 +548,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -505,12 +601,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -546,12 +654,24 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -587,12 +707,35 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
@@ -628,13 +771,26 @@ document.addEventListener('click', function(event) {
                             // console.log('Event Title');
                             // console.log(data.events[i].title);
 
+                            var saveButton = document.createElement("button");
+                            saveButton.textContent = "Save";
+                            saveButton.addEventListener("click", saveEvent);
+                            
+                            function saveEvent (event) {
+                            var eventName = event.target.previousSibling.textContent
+                            var eventString = JSON.stringify(eventName);
+                            localStorage.setItem('savedEvent', eventString);
+                            console.log(eventString);
+                            }
+
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
                             createTableRow.appendChild(city);
                             createTableRow.appendChild(venue);
                             createTableRow.appendChild(name);
                             tableBody.appendChild(createTableRow);
+                            tableBody.appendChild(saveButton);   
                         }
                     })
         }
 
+        
