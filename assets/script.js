@@ -182,11 +182,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -235,11 +235,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -288,11 +288,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -341,11 +341,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -394,11 +394,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -447,11 +447,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -500,11 +500,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -555,8 +555,8 @@ document.addEventListener('click', function(event) {
                             function saveEvent (event) {
                             var eventName = event.target.previousSibling.textContent
                             var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
+                            var key = 'string' + Date.now();
+                            localStorage.setItem(key, eventString);
                             }
 
                             time.appendChild(timeText);
@@ -606,11 +606,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -659,11 +659,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
@@ -712,11 +712,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             var saveButton = document.createElement("button");
                             saveButton.textContent = "Save";
@@ -776,11 +776,11 @@ document.addEventListener('click', function(event) {
                             saveButton.addEventListener("click", saveEvent);
                             
                             function saveEvent (event) {
-                            var eventName = event.target.previousSibling.textContent
-                            var eventString = JSON.stringify(eventName);
-                            localStorage.setItem('savedEvent', eventString);
-                            console.log(eventString);
-                            }
+                                var eventName = event.target.previousSibling.textContent
+                                var eventString = JSON.stringify(eventName);
+                                var key = 'string' + Date.now();
+                                localStorage.setItem(key, eventString);
+                                }
 
                             time.appendChild(timeText);
                             createTableRow.appendChild(time);
