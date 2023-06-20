@@ -1,5 +1,5 @@
 body {
-	/* background-image:url(./images/project\ 1.jpg); */
+	background-image:url(./images/project\ 1.jpg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -97,6 +97,20 @@ body {
 	float: right;
 }
 
+.tbody {
+	background-color: #000000;
+	color: white;
+	font-size: larger;
+	border-radius: 60px;
+	flex: 90%;
+	display: wrap;
+	font-size: 135%;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 5px;
+	height: 125%;
+}
+
 footer {
     padding: 10px;
     display: flex;
@@ -105,10 +119,11 @@ footer {
     color: white;
     flex-wrap: wrap;
     justify-content: space-evenly;
-	border-style: solid;
+    border-style: solid;
     border-width: 4px;
-	border-radius: 10px;
-	border: black;
+    border-radius: 10px;
+    border: black;
+    list-style: none;
 }
 
 
