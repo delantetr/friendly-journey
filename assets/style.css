@@ -167,8 +167,6 @@ footer {
 	  }
 
 	  .contact ul {
-		border-radius: 50px;
-		flex: 90%;
 		color: white;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		display: flex;
@@ -178,20 +176,29 @@ footer {
 		margin: 5px;
 		height: 125%;
 		list-style: none;
+		border-radius: 50px;
+		flex: 90%;
 		padding: 10px;
 	  }
 
-	@media screen and (max-width: 1150px) {
+	  @media screen and (max-width: 1150px) {
 		menu ul {
-			flex-direction: column;
-			align-items: flex-end;
+		  flex-direction: column;
+		  align-items: flex-end;
 		}
 		.contact ul {
-			flex-direction: column;
+		  flex-direction: column;
+		  .title {
+			font-size: 175%;
+		  }
 		}
-		
-	}
-
-	@media screen and (max-width: 768) {
-
+	  }
+	  /* changed flex direction for 'about' and 'work' so they will display vertically on smaller screens*/
+	  @media screen and (max-width: 768px) {
+		menu ul {
+		flex-wrap: nowrap;
+		flex-direction: column;}
+		 .contact ul{
+		  flex-wrap: wrap-reverse;
 		}
+	  }
