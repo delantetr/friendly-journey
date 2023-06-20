@@ -14,6 +14,8 @@ body {
 	border: 2px solid black;
 	display: flex;
 	flex-wrap:wrap ;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #menu ul, #menu li {
@@ -28,8 +30,7 @@ body {
 }
 
 #menu li {
-	float: left;
-	display: inline;
+	display: inline-block;
 	position: relative;
 }
 
@@ -151,3 +152,22 @@ footer {
 			text-shadow: none;
 		}
 	}
+
+@media (max-width: 800px) {
+	#menu {
+		height: auto;
+		border-radius: 0;
+		border: none;
+	}
+	#menu li {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	#menu li a {
+		line-height: 45px;
+	}
+	#menu label {
+		display: block;
+	}
+}
