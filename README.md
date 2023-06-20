@@ -17,5 +17,5 @@ SeatGeek, however, an API that is able to provide more local events and not just
 
 The deployed URL can be found here:
 
-A screen capture of the home page can be found below:
+A screen capture of the home page can be found below: ![Alt Text](assets/images/ezgif.com-video-to-gif%20(1).gif)
 
