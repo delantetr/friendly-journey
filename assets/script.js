@@ -7,6 +7,7 @@ var holidayList = document.getElementById("holiday-list");
 var tableWindow = document.querySelector('#holiday-table');
 var tableBody = document.querySelector('#h-table-body');
 var holidayDropdown = document.querySelector('#holiday-dropdown');
+var headerRow = document.querySelector('#headerRow');
 
 // document.body.children[1].children[0].children[1].children[2].children[0].setAttribute('id', nye);
 
@@ -16,6 +17,11 @@ console.log(document.body.children[2].children[1].children[1].children[1].childr
 // // GLobal Variables-----------------------------------------------------------
 var options;
 var eventArray = []
+var headerTexts = ['Time', 'City', 'Venue', 'Event'];
+var headerColor = 'white';
+var headerBackgroundColor = 'black';
+
+
 
 
 
@@ -116,6 +122,8 @@ document.addEventListener('click', function(event) {
         var holiday = holidayChoice.getAttribute('id');
         // console.log(holiday);
 
+       
+
         
         if (state === 'hidden' && holiday === 'new-years') {
             fetchNewYearsEvents();
@@ -196,6 +204,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                 })
         }
         function fetchMLKEvents () {
@@ -249,6 +265,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchPresidentsDayEvents () {
@@ -302,6 +326,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchGoodFridayEvents () {
@@ -355,6 +387,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchMemorialDayEvents () {
@@ -408,6 +448,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchJuneteenthEvents () {
@@ -461,6 +509,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchIndependenceDayEvents () {
@@ -514,6 +570,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchLaborDayEvents () {
@@ -567,6 +631,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchColumbusDayEvents () {
@@ -620,6 +692,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchVeteransDayEvents () {
@@ -673,6 +753,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchThanksgivingEvents () {
@@ -737,6 +825,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
         function fetchChristmasEvents () {
@@ -790,6 +886,14 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(createTableRow);
                             tableBody.appendChild(saveButton);   
                         }
+
+                        headerTexts.forEach((text) => {
+                            var th = document.createElement('th');
+                            th.textContent = text;
+                            th.style.color = headerColor;
+                            th.style.backgroundColor = headerBackgroundColor;
+                            headerRow.appendChild(th)
+                        })
                     })
         }
 
