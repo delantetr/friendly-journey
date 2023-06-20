@@ -205,13 +205,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                 })
         }
         function fetchMLKEvents () {
@@ -266,13 +266,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchPresidentsDayEvents () {
@@ -327,13 +327,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchGoodFridayEvents () {
@@ -388,13 +388,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchMemorialDayEvents () {
@@ -449,13 +449,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchJuneteenthEvents () {
@@ -510,13 +510,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchIndependenceDayEvents () {
@@ -571,13 +571,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchLaborDayEvents () {
@@ -632,13 +632,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchColumbusDayEvents () {
@@ -693,13 +693,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchVeteransDayEvents () {
@@ -754,13 +754,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchThanksgivingEvents () {
@@ -826,13 +826,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
         function fetchChristmasEvents () {
@@ -887,13 +887,13 @@ document.addEventListener('click', function(event) {
                             tableBody.appendChild(saveButton);   
                         }
 
-                        headerTexts.forEach((text) => {
-                            var th = document.createElement('th');
-                            th.textContent = text;
-                            th.style.color = headerColor;
-                            th.style.backgroundColor = headerBackgroundColor;
-                            headerRow.appendChild(th)
-                        })
+                        // headerTexts.forEach((text) => {
+                        //     var th = document.createElement('th');
+                        //     th.textContent = text;
+                        //     th.style.color = headerColor;
+                        //     th.style.backgroundColor = headerBackgroundColor;
+                        //     headerRow.appendChild(th)
+                        // })
                     })
         }
 
