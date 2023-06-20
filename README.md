@@ -15,7 +15,7 @@ Future development:
 This application can be taken to the next level with future development and quite a few things immediately come to mind. We ran into trouble with a few different APIs until we found
 SeatGeek, however, an API that is able to provide more local events and not just the big concerts and sporting events would add to the hometown feel of celebrating a holiday in your community. That would elevate some of the other features such as our state and city tabs on the navbar that can filter down what you might be looking for. Right now, it only populates bigger events so a lot of states and cities would be completely empty in that filter. We tried EventBrite but their API stopped populating events in 2019 so a big step in future development would be to make this accessible to smaller cities and towns. The new Broadway show in New York City is nice to find but we'd also like someone in Bozeman, Montana to be able to find downtown celebrations for Independence Day.
 
-The deployed URL can be found here:
+The deployed URL can be found here: https://delantetr.github.io/friendly-journey/
 
-A screen capture of the home page can be found below: ![](https://github.com/delantetr/friendly-journey/exgif.com-video-to-gif(1).gif)
+A screen capture of the home page can be found below: ![Alt Text](assets/images/ezgif.com-video-to-gif%20(1).gif)
 
